@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+}
+
+.game-board .card {
+    background-image: url("assets/main.png");
+    background-size: 100%;
+    background-position: 100%;
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    color: #ffffff00;
+}
+
+.game-board .card.flipped {
+    transform: rotateY(190deg);
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
+
+    font-size: 24px;
+}
+
+.game-info {
+    margin-top: 20px;
+}
